@@ -114,9 +114,10 @@
         const projects = data.projects.filter((project) => filter === 'all' || project.category === filter);
         container.innerHTML = projects.map((project) => `
             <article class="project-card reveal">
-                <div class="project-art project-art-${project.art}" aria-hidden="true">
+                <div class="project-art project-art-${project.art}${project.image ? ' project-art-has-image' : ''}">
+                    ${project.image ? `<img class="project-art-image" src="${project.image}" alt="${project.imageAlt}" loading="lazy" decoding="async">` : ''}
                     <span class="project-art-label">${project.artLabel}</span>
-                    <span class="project-art-mark">${project.mark}</span>
+                    ${project.image ? '' : `<span class="project-art-mark">${project.mark}</span>`}
                     <span class="project-art-index">${project.number}</span>
                 </div>
                 <div class="project-card-content">
@@ -222,11 +223,10 @@
         const body = [
             `Name: ${formData.get('name')}`,
             `Email: ${formData.get('email')}`,
-            `Project type: ${formData.get('project')}`,
             '',
             formData.get('message')
         ].join('\n');
-        const mailto = `mailto:${data.email}?subject=${encodeURIComponent(`${formData.get('project')}: ${subject}`)}&body=${encodeURIComponent(body)}`;
+        const mailto = `mailto:${data.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         document.getElementById('form-status').textContent = 'Opening your email app. If it does not open, email Bilal directly using the address on this page.';
         window.location.href = mailto;
     });

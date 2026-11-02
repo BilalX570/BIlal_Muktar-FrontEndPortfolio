@@ -11,17 +11,17 @@ window.portfolioData = {
         {
             category: 'Web development',
             mark: '</>',
-            items: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS']
+            items: ['Business websites', 'Responsive layouts', 'Front-end development']
         },
         {
-            category: 'Software & data',
+            category: 'Bots & useful workflows',
             mark: '{ }',
-            items: ['Node.js', 'Python', 'Supabase', 'Git']
+            items: ['Telegram bots', 'Task-focused tools', 'Community needs']
         },
         {
-            category: 'Infrastructure',
+            category: 'Learning by building',
             mark: '↗',
-            items: ['Networking', 'IT infrastructure', 'Telegram bots']
+            items: ['Practical web apps', 'Supabase', 'Iterative problem-solving']
         }
     ],
     projects: [
@@ -40,20 +40,6 @@ window.portfolioData = {
             mark: 'D'
         },
         {
-            id: 'digital-iqub',
-            number: '02',
-            name: 'Digital Iqub',
-            type: 'Web application',
-            category: 'web',
-            status: 'In progress',
-            description: 'A digital platform concept for making rotating savings groups easier to organize.',
-            detail: 'Digital Iqub brings the familiar rotating savings group into a more organized digital experience. The goal is to make group coordination and participation clearer for members.',
-            technologies: ['Web app', 'Community finance'],
-            art: 'iqub',
-            artLabel: 'TOGETHER · IN CIRCLES',
-            mark: 'እ'
-        },
-        {
             id: 'muktar-metal',
             number: '03',
             name: 'Muktar Metal Work',
@@ -64,6 +50,8 @@ window.portfolioData = {
             detail: 'A small-business digital presence combining a website with a Telegram bot. It is designed to help customers discover the business and connect with it more easily.',
             technologies: ['Website', 'Telegram bot'],
             art: 'metal',
+            image: 'images/metal%20work.jpg',
+            imageAlt: 'Metalworkers welding steel in a workshop',
             artLabel: 'CRAFT · MADE LOCAL',
             mark: 'M'
         },
@@ -78,6 +66,8 @@ window.portfolioData = {
             detail: 'A lightweight coffee-house website built to give the business an inviting online home. Its live demo is available; add the source repository and a project-specific screenshot when available.',
             technologies: ['HTML', 'CSS', 'JavaScript'],
             art: 'coffee',
+            image: 'images/coffee%20house.jpg',
+            imageAlt: 'Warmly lit coffee house with indoor and outdoor seating',
             artLabel: 'COFFEE · COMMUNITY',
             mark: '☕',
             demo: 'https://wendmamachoch-coffee-shop.netlify.app/'
