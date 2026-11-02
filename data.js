@@ -58,19 +58,19 @@ window.portfolioData = {
         {
             id: 'coffee-house',
             number: '04',
-            name: 'Coffee House Platform',
+            name: 'Kamole Coffee House',
             type: 'Business website',
             category: 'web',
             status: 'Live',
-            description: 'A responsive coffee-house website that introduces the business and gives visitors a simple way to explore it.',
-            detail: 'A lightweight coffee-house website built to give the business an inviting online home. Its live demo is available; add the source repository and a project-specific screenshot when available.',
+            description: 'A cozy coffee-house website for Kamole Coffee House, created to introduce the brand and invite visitors in.',
+            detail: 'A warm, welcoming coffee-house landing page built to showcase Kamole Coffee House with a simple browsing experience and a strong local brand presence.',
             technologies: ['HTML', 'CSS', 'JavaScript'],
             art: 'coffee',
             image: 'images/coffee%20house.jpg',
             imageAlt: 'Warmly lit coffee house with indoor and outdoor seating',
-            artLabel: 'COFFEE · COMMUNITY',
+            artLabel: 'KAMOLE · COFFEE HOUSE',
             mark: '☕',
-            demo: 'https://wendmamachoch-coffee-shop.netlify.app/'
+            demo: 'https://kamole-coffee-house.netlify.app/'
         },
         {
             id: 'ethio-skill-match',
