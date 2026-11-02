@@ -222,10 +222,11 @@
         const body = [
             `Name: ${formData.get('name')}`,
             `Email: ${formData.get('email')}`,
+            `Project type: ${formData.get('project')}`,
             '',
             formData.get('message')
         ].join('\n');
-        const mailto = `mailto:${data.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        const mailto = `mailto:${data.email}?subject=${encodeURIComponent(`${formData.get('project')}: ${subject}`)}&body=${encodeURIComponent(body)}`;
         document.getElementById('form-status').textContent = 'Opening your email app. If it does not open, email Bilal directly using the address on this page.';
         window.location.href = mailto;
     });
