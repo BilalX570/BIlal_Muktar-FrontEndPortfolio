@@ -245,7 +245,11 @@
                     </div>
                     <p class="contact-location"><span aria-hidden="true"></span> Based in Ethiopia · Open to opportunities</p>
                 </div>
-                <form class="contact-form reveal" id="contact-form">
+                <form class="contact-form reveal" id="contact-form" name="project-inquiry" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="project-inquiry">
+                    <p class="form-honeypot" hidden>
+                        <label>Leave this field empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+                    </p>
                     <div class="contact-form-heading">
                         <span class="form-step">01 <span aria-hidden="true">/</span> 01</span>
                         <h3>Send a project inquiry</h3>
@@ -265,8 +269,8 @@
                             <textarea id="contact-message" name="message" rows="4" placeholder="A short note about your idea or project..." required></textarea>
                         </div>
                     </div>
-                    <button class="button button-primary form-submit" type="submit">Continue to email <span aria-hidden="true">↗</span></button>
-                    <p class="form-status" id="form-status" aria-live="polite">Your email app will open with your message ready to send.</p>
+                    <button class="button button-primary form-submit" type="submit"><span class="form-submit-label">Send inquiry</span><span aria-hidden="true">↗</span></button>
+                    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
                 </form>
             </div>
         </section>

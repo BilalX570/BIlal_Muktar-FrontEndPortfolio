@@ -214,21 +214,46 @@
         dialog.showModal();
     });
 
-    document.getElementById('contact-form').addEventListener('submit', (event) => {
+    document.getElementById('contact-form').addEventListener('submit', async (event) => {
         event.preventDefault();
         const form = event.currentTarget;
         if (!form.reportValidity()) return;
-        const formData = new FormData(form);
-        const subject = `Portfolio inquiry from ${formData.get('name')}`;
-        const body = [
-            `Name: ${formData.get('name')}`,
-            `Email: ${formData.get('email')}`,
-            '',
-            formData.get('message')
-        ].join('\n');
-        const mailto = `mailto:${data.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        document.getElementById('form-status').textContent = 'Opening your email app. If it does not open, email Bilal directly using the address on this page.';
-        window.location.href = mailto;
+        const submitButton = form.querySelector('[type="submit"]');
+        const submitLabel = submitButton.querySelector('.form-submit-label');
+        const status = document.getElementById('form-status');
+        const resetButton = () => {
+            submitButton.disabled = false;
+            submitLabel.textContent = 'Send inquiry';
+            form.removeAttribute('aria-busy');
+        };
+
+        submitButton.disabled = true;
+        submitLabel.textContent = 'Sending...';
+        form.setAttribute('aria-busy', 'true');
+        status.dataset.state = 'pending';
+        status.textContent = 'Sending your inquiry...';
+
+        try {
+            const response = await window.fetch(form.action, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(new FormData(form)).toString()
+            });
+
+            if (!response.ok) {
+                throw new Error(`Inquiry submission failed with status ${response.status}`);
+            }
+
+            form.reset();
+            status.dataset.state = 'success';
+            status.textContent = "Thanks—your inquiry was received. I'll be in touch soon.";
+            resetButton();
+        } catch (error) {
+            console.error('Project inquiry could not be submitted.', error);
+            status.dataset.state = 'error';
+            status.textContent = 'Your inquiry could not be sent. Please try again or email me directly at bilalmuktar192@gmail.com.';
+            resetButton();
+        }
     });
 
     const typedText = document.querySelector('.typed-text');
