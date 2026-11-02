@@ -217,27 +217,59 @@
     document.getElementById('contact-form').addEventListener('submit', async (event) => {
         event.preventDefault();
         const form = event.currentTarget;
+        const nameField = form.elements.namedItem('name');
+        const emailField = form.elements.namedItem('email');
+        const messageField = form.elements.namedItem('message');
+        nameField.value = nameField.value.trim();
+        emailField.value = emailField.value.trim();
+        messageField.value = messageField.value.trim();
         if (!form.reportValidity()) return;
+
         const submitButton = form.querySelector('[type="submit"]');
         const submitLabel = submitButton.querySelector('.form-submit-label');
         const status = document.getElementById('form-status');
+        const showStatus = (message, state, formData = null) => {
+            status.dataset.state = state;
+            status.replaceChildren(document.createTextNode(message));
+
+            if (formData) {
+                const subject = `Portfolio inquiry from ${formData.get('name')}`;
+                const body = [
+                    `Name: ${formData.get('name')}`,
+                    `Email: ${formData.get('email')}`,
+                    '',
+                    formData.get('message')
+                ].join('\n');
+                const emailLink = document.createElement('a');
+                emailLink.href = `mailto:${data.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                emailLink.textContent = 'Email me directly';
+                status.append(document.createTextNode(' '), emailLink);
+            }
+        };
         const resetButton = () => {
             submitButton.disabled = false;
             submitLabel.textContent = 'Send inquiry';
             form.removeAttribute('aria-busy');
         };
+        const formData = new FormData(form);
+        const controller = new AbortController();
+        let timedOut = false;
 
         submitButton.disabled = true;
         submitLabel.textContent = 'Sending...';
         form.setAttribute('aria-busy', 'true');
-        status.dataset.state = 'pending';
-        status.textContent = 'Sending your inquiry...';
+        showStatus('Sending your inquiry...', 'pending');
+        const timeoutId = window.setTimeout(() => {
+            timedOut = true;
+            controller.abort();
+        }, 8000);
 
         try {
             const response = await window.fetch(form.action, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams(new FormData(form)).toString()
+                body: new URLSearchParams(formData).toString(),
+                signal: controller.signal
             });
 
             if (!response.ok) {
@@ -245,14 +277,17 @@
             }
 
             form.reset();
-            status.dataset.state = 'success';
-            status.textContent = "Thanks—your inquiry was received. I'll be in touch soon.";
+            showStatus("Thanks—your inquiry was received. I'll be in touch soon.", 'success');
             resetButton();
         } catch (error) {
             console.error('Project inquiry could not be submitted.', error);
-            status.dataset.state = 'error';
-            status.textContent = 'Your inquiry could not be sent. Please try again or email me directly at bilalmuktar192@gmail.com.';
+            const message = timedOut
+                ? "We couldn't confirm your inquiry was received within 8 seconds. It may still have arrived, so please check before resending."
+                : 'We could not confirm your inquiry was received. Please use the email option instead.';
+            showStatus(message, 'error', formData);
             resetButton();
+        } finally {
+            window.clearTimeout(timeoutId);
         }
     });
 
