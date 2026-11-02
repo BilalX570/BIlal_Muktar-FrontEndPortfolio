@@ -1,274 +1,246 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bilal Muktar – Front-End Developer | Portfolio</title>
-    <meta name="description"
-        content="Portfolio of Bilal Muktar, a front-end developer crafting fast, accessible, and responsive web experiences.">
-    <meta name="theme-color" content="#111827">
-    <meta property="og:title" content="Bilal Muktar – Front-End Developer">
-    <meta property="og:description"
-        content="Explore my work, skills, and experience in building modern web interfaces.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f7f3">
+    <meta name="description" content="Bilal Muktar is a computer science student and developer in Ethiopia, building thoughtful websites, Telegram bots, and digital tools for local businesses and communities.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://placehold.co/1200x630/png">
-    <meta property="og:url" content="/">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap"
-        rel="stylesheet">
-    <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="style.css">
-    </noscript>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
-        onload="this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    </noscript>
-</head>
-
-<body>
-    <aside class="sidebar" id="sidebar">
-        <div class="sidebar-inner">
-            <div class="profile">
-                <img src="images/Bilal.jpg" alt="Bilal Muktar headshot" class="profile-img" loading="lazy"
-                    decoding="async" />
-                <h1 class="profile-name">Bilal Muktar</h1>
-                <p class="profile-tag">Front-End Developer</p>
-            </div>
-            <nav class="side-nav">
-                <ul>
-                    <li><a class="nav-link" href="#home"><i class="fas fa-house"></i> Home</a></li>
-                    <li><a class="nav-link" href="#about"><i class="fas fa-user"></i> About</a></li>
-                    <li><a class="nav-link" href="#projects"><i class="fas fa-folder-open"></i> Projects</a></li>
-                    <li><a class="nav-link" href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                </ul>
-            </nav>
-            <div class="sidebar-spacer"></div>
-            <div class="side-social">
-                <a href="https://github.com/BilalX570" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
-                        class="fab fa-github"></i></a>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://x.com/BilalMukta43079" target="_blank" rel="noopener noreferrer"
-                    aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            </div>
-        </div>
-    </aside>
-
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="sidebar">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-    </button>
-
-    <main class="content">
-        <!-- Home / Hero -->
-        <section id="home" class="hero">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <h1>Hi, I'm Bilal Muktar</h1>
-                    <p class="typing-text">A Front-End Developer <span class="typed-text"></span><span
-                            class="cursor">&nbsp;</span></p>
-                    <p class="hero-bio">I craft exceptional digital experiences with clean, efficient code and
-                        pixel-perfect designs.</p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-secondary">View My Work</a>
-                        <a href="images/Bilal%20Muktar%20CV.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View CV</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="image-frame">
-                        <img class="me" src="images/Bilal.jpg" alt="Photo of Bilal Muktar" fetchpriority="high"
-                            decoding="async">
-                        <div class="glow-ring"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About -->
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>I'm a Computer Science student at Dilla University with a growing passion for frontend
-                            development. While I'm still early in my coding journey, I'm dedicated to mastering the art
-                            of building modern, accessible web interfaces that users love.</p>
-                        <p>My approach combines technical fundamentals with user-centered design thinking. I believe
-                            great frontend development isn't just about writing code - it's about creating intuitive
-                            digital experiences that solve real problems.</p>
-                        <div class="strengths">
-                            <div class="strength-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Pixel-Perfect Implementation</span>
-                            </div>
-                            <div class="strength-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Performance-Centric</span>
-                            </div>
-                            <div class="strength-item">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Collaborative Team Player</span>
-                            </div>
-                        </div>
-                    </div>
-                    <img src="images/coding.jpg" alt="Person coding at a desk" loading="lazy" decoding="async">
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills -->
-        <section id="skills" class="skills">
-            <div class="container">
-                <h2 class="section-title">Skills & Technologies</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Languages</h3>
-                        <div class="skill-list">
-                            <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
-                            <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
-                            <div class="skill-item"><i class="fab fa-js"></i><span>JavaScript (ES6+)</span></div>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Framework and Styling</h3>
-                        <div class="skill-list">
-                            <div class="skill-item"><i class="fab fa-react"></i><span>React</span></div>
-                            <div class="skill-item"><i class="fas fa-wind"></i><span>Tailwind CSS</span></div>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Tools & Other</h3>
-                        <div class="skill-list">
-                            <div class="skill-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
-                            <div class="skill-item"><i class="fab fa-figma"></i><span>Figma</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience -->
-        <section id="experience" class="experience">
-            <div class="container">
-                <h2 class="section-title">Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>Front-End Developer (Freelance)</h3>
-                            <p class="timeline-meta">Present</p>
-                            <p>Delivering responsive, accessible interfaces with HTML, CSS, and JavaScript. Emphasis on
-                                performance, semantics, and component-driven UI patterns.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>BSc in Computer Science, Dilla University</h3>
-                            <p class="timeline-meta">Ongoing</p>
-                            <p>Studying CS fundamentals and applying front-end skills to academic and personal projects.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects -->
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="images/Coffee-Shop.png" alt="Coffee Shop Website Preview" loading="lazy"
-                                decoding="async" />
-                        </div>
-                        <div class="project-info">
-                            <h3>Coffee Shop Website</h3>
-                            <p>A modern, responsive coffee shop website built with HTML, CSS, and JavaScript.</p>
-                            <div class="project-links">
-                                <a href="https://wendmamachoch-coffee-shop.netlify.app/" target="_blank"
-                                    rel="noopener noreferrer" class="project-link live-demo"><i
-                                        class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <a href="https://github.com/BilalX570/Coffee--Shop-Website.git"
-                                    class="project-link github-repo"><i class="fab fa-github"></i> GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="images/desktop-design-dark.jpg" alt="Desktop Design Preview" loading="lazy"
-                                decoding="async" />
-                        </div>
-                        <div class="project-info">
-                            <h3>Social Media Dashboard</h3>
-                            <p>A sleek, modern dashboard for managing social media accounts.</p>
-                            <div class="project-links">
-                                <a href="https://modern-social-media-dashboard.netlify.app/" target="_blank"
-                                    rel="noopener noreferrer" class="project-link live-demo"><i
-                                        class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <a href="https://github.com/BilalX570/Social-Media-Dashboard"
-                                    class="project-link github-repo"><i class="fab fa-github"></i> GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="contact-content">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="from_name" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="from_email" required />
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                    <div class="contact-info">
-                        <h3>Contact Information</h3>
-                        <p><i class="fas fa-envelope" aria-hidden="true"></i> <a
-                                href="mailto:bilalmuktar192@gmail.com">bilalmuktar192@gmail.com</a></p>
-                        <div class="social-links">
-                            <a href="https://github.com/BilalX570" target="_blank" rel="noopener noreferrer"
-                                aria-label="GitHub"><i class="fab fa-github"></i></a>
-                            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
-                                    class="fab fa-linkedin"></i></a>
-                            <a href="https://x.com/BilalMukta43079" target="_blank" rel="noopener noreferrer"
-                                aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <div class="container">
-                <p>&copy; 2026 Bilal Muktar. Built with passion and HTML/CSS/JS.</p>
-                <a href="#home" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
-            </div>
-        </footer>
-    </main>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" defer></script>
+    <meta property="og:title" content="Bilal Muktar — Developer in Ethiopia">
+    <meta property="og:description" content="Digital tools for local businesses and communities. Explore Bilal's projects and get in touch.">
+    <meta property="og:image" content="images/bilu.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Bilal Muktar — Developer in Ethiopia">
+    <meta name="twitter:description" content="Websites, Telegram bots, and useful digital tools for businesses and communities.">
+    <title>Bilal Muktar — Developer in Ethiopia</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preload" href="images/bilu.png" as="image" fetchpriority="high">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Bilal Muktar",
+            "jobTitle": "Computer Science Student and Web/Software Developer",
+            "email": "bilalmuktar192@gmail.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "Ethiopia"
+            },
+            "sameAs": [
+                "https://github.com/BilalX570",
+                "https://x.com/BilalMukta43079"
+            ]
+        }
+    </script>
+    <script src="data.js" defer></script>
     <script src="script.js" defer></script>
-</body>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <a class="brand" href="#home" aria-label="Bilal Muktar, home">
+            <span class="brand-mark" aria-hidden="true">B</span>
+            <span>Bilal<span class="brand-dot">.</span></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="menu-toggle-label">Menu</span>
+            <span class="menu-icon" aria-hidden="true"><span></span><span></span></span>
+        </button>
+        <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation">
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#experience">Journey</a>
+            <a class="nav-link" href="#services">Services</a>
+            <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+            <a class="header-availability" href="#contact"><span aria-hidden="true"></span> Open to opportunities</a>
+            <button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Switch theme">
+                <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+                <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.6 8.6 0 1 0 20.2 15.1Z"></path></svg>
+            </button>
+        </div>
+    </header>
 
+    <main id="main">
+        <section class="hero section-shell" id="home" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="eyebrow-line"></span> DEVELOPER · ETHIOPIA</p>
+                <h1 id="hero-title">I build useful digital experiences <span>for people and businesses.</span></h1>
+                <p class="hero-intro">I'm Bilal, a computer science student and web/software developer turning local ideas into practical websites, bots, and digital tools.</p>
+                <p class="hero-role">Currently exploring <span class="typed-text">web development</span><span class="typing-cursor" aria-hidden="true"></span></p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#projects">View projects <span aria-hidden="true">↗</span></a>
+                    <a class="button button-secondary" href="#contact">Contact me <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="hero-footnote"><span class="location-pin" aria-hidden="true">⌖</span> Based in Ethiopia · Building for my community</div>
+            </div>
+            <div class="hero-visual">
+                <div class="portrait-frame">
+                    <img src="images/bilu.png" alt="Bilal Muktar" width="428" height="505" fetchpriority="high" decoding="async">
+                    <span class="portrait-stamp">Curious by nature<br>Builder by practice</span>
+                </div>
+                <div class="hero-note">
+                    <span class="hero-note-mark" aria-hidden="true">✳</span>
+                    <span>Thoughtful code.<br>Real-world impact.</span>
+                </div>
+                <span class="hero-orbit hero-orbit-one" aria-hidden="true"></span>
+                <span class="hero-orbit hero-orbit-two" aria-hidden="true"></span>
+            </div>
+            <a class="scroll-cue" href="#about"><span></span> Scroll to explore</a>
+        </section>
+
+        <section class="section section-about" id="about" aria-labelledby="about-title">
+            <div class="section-shell">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">A LITTLE ABOUT ME</p>
+                    <h2 id="about-title">Technology should make<br><span>everyday life easier.</span></h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-image reveal">
+                        <img src="images/coding.jpg" alt="A developer working at a computer" width="640" height="427" loading="lazy" decoding="async">
+                        <span class="image-caption">Learning, building, and sharing along the way.</span>
+                    </div>
+                    <div class="about-copy reveal">
+                        <p class="lead">I'm Bilal Muktar, a computer science student at Dilla University and a developer based in Ethiopia.</p>
+                        <p>My interest in technology is rooted in its potential to solve everyday problems. I enjoy creating digital tools for local businesses and my community—from a business website or Telegram bot to a platform that helps people work together.</p>
+                        <p>My network and infrastructure internship at Ethio Telecom broadened my perspective on the systems that keep people connected. I bring that curiosity into every project and keep learning as I build.</p>
+                        <div class="about-actions">
+                            <a class="text-link" href="mailto:bilalmuktar192@gmail.com?subject=Could%20you%20share%20your%20CV%3F">Request my CV <span aria-hidden="true">↗</span></a>
+                            <span class="availability-note">CV available on request</span>
+                        </div>
+                        <div class="about-facts">
+                            <div><strong>01</strong><span>Community-minded</span></div>
+                            <div><strong>02</strong><span>Always learning</span></div>
+                            <div><strong>03</strong><span>Practical by design</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-skills" id="skills" aria-labelledby="skills-title">
+            <div class="section-shell">
+                <div class="section-heading section-heading-centered reveal">
+                    <p class="eyebrow">MY TOOLKIT</p>
+                    <h2 id="skills-title">Skills for <span>building things.</span></h2>
+                    <p>Tools and technologies I use to turn ideas into useful experiences.</p>
+                </div>
+                <div class="skills-grid" id="skills-grid"></div>
+            </div>
+        </section>
+
+        <section class="section section-projects" id="projects" aria-labelledby="projects-title">
+            <div class="section-shell">
+                <div class="section-heading projects-heading reveal">
+                    <div>
+                        <p class="eyebrow">SELECTED WORK & IDEAS</p>
+                        <h2 id="projects-title">Made to solve <span>real problems.</span></h2>
+                    </div>
+                    <p>Each project starts with a need and a question: how can technology make this a little easier?</p>
+                </div>
+                <div class="project-filters" role="group" aria-label="Filter projects">
+                    <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All work</button>
+                    <button class="filter-button" type="button" data-filter="web" aria-pressed="false">Web apps</button>
+                    <button class="filter-button" type="button" data-filter="bots" aria-pressed="false">Bots</button>
+                    <button class="filter-button" type="button" data-filter="concept" aria-pressed="false">Concepts</button>
+                </div>
+                <div class="projects-grid" id="projects-grid" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="section section-journey" id="experience" aria-labelledby="journey-title">
+            <div class="section-shell journey-grid">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">THE JOURNEY SO FAR</p>
+                    <h2 id="journey-title">Learning by <span>doing.</span></h2>
+                    <p>Building a strong foundation through study, hands-on work, and projects that matter to people around me.</p>
+                </div>
+                <div class="timeline" id="timeline"></div>
+            </div>
+        </section>
+
+        <section class="section section-services" id="services" aria-labelledby="services-title">
+            <div class="section-shell">
+                <div class="section-heading section-heading-centered reveal">
+                    <p class="eyebrow">HOW I CAN HELP</p>
+                    <h2 id="services-title">Small business, <span>big potential.</span></h2>
+                    <p>Practical digital foundations to help local businesses and community projects move forward.</p>
+                </div>
+                <div class="services-grid">
+                    <article class="service-card reveal">
+                        <span class="service-number">01</span>
+                        <h3>Business websites</h3>
+                        <p>Clear, responsive websites that explain what you do and help customers take the next step.</p>
+                        <span class="service-tags">Responsive design · Fast loading</span>
+                    </article>
+                    <article class="service-card reveal">
+                        <span class="service-number">02</span>
+                        <h3>Telegram bots</h3>
+                        <p>Useful bot experiences that answer questions, guide users, or simplify a repeat task.</p>
+                        <span class="service-tags">Telegram · Workflow tools</span>
+                    </article>
+                    <article class="service-card reveal">
+                        <span class="service-number">03</span>
+                        <h3>Web applications</h3>
+                        <p>Purpose-built web tools for organizing information and helping communities work together.</p>
+                        <span class="service-tags">Web apps · Digital tools</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-kind-words" aria-labelledby="kind-words-title">
+            <div class="section-shell">
+                <div class="kind-words-card reveal">
+                    <span class="quote-mark" aria-hidden="true">“</span>
+                    <div>
+                        <p class="eyebrow">KIND WORDS</p>
+                        <h2 id="kind-words-title">Good work speaks for itself.<br><span>People make it meaningful.</span></h2>
+                        <p class="kind-words-note">Client and collaborator testimonials will appear here as projects grow.</p>
+                    </div>
+                    <span class="kind-words-spark" aria-hidden="true">✳</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-contact" id="contact" aria-labelledby="contact-title">
+            <div class="section-shell contact-grid">
+                <div class="contact-copy reveal">
+                    <p class="eyebrow">LET'S MAKE SOMETHING USEFUL</p>
+                    <h2 id="contact-title">Have an idea?<br><span>Let's talk.</span></h2>
+                    <p>Have a project in mind, need a digital starting point for your business, or simply want to connect? Send me a note.</p>
+                    <a class="contact-email" href="mailto:bilalmuktar192@gmail.com">bilalmuktar192@gmail.com <span aria-hidden="true">↗</span></a>
+                    <div class="contact-socials" id="contact-socials" aria-label="Social profiles"></div>
+                </div>
+                <form class="contact-form reveal" id="contact-form">
+                    <p class="form-intro">Tell me a little about what you're looking for.</p>
+                    <label for="contact-name">Your name</label>
+                    <input id="contact-name" name="name" type="text" autocomplete="name" required>
+                    <label for="contact-email">Email address</label>
+                    <input id="contact-email" name="email" type="email" autocomplete="email" required>
+                    <label for="contact-message">A little about your project</label>
+                    <textarea id="contact-message" name="message" rows="4" required></textarea>
+                    <button class="button button-primary form-submit" type="submit">Open email to send <span aria-hidden="true">↗</span></button>
+                    <p class="form-status" id="form-status" aria-live="polite">This form opens your email app; it does not store or send your message on this site.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="section-shell footer-inner">
+            <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">B</span><span>Bilal<span class="brand-dot">.</span></span></a>
+            <p>Built with care in Ethiopia <span aria-hidden="true">✳</span> <span id="copyright-year"></span></p>
+            <a class="back-to-top" href="#home">Back to top <span aria-hidden="true">↑</span></a>
+        </div>
+    </footer>
+
+    <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+        <form method="dialog"><button class="dialog-close" aria-label="Close project details">×</button></form>
+        <div class="dialog-content" id="dialog-content"></div>
+    </dialog>
+</body>
 </html>
