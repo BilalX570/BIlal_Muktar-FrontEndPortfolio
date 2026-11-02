@@ -228,20 +228,23 @@
         const submitButton = form.querySelector('[type="submit"]');
         const submitLabel = submitButton.querySelector('.form-submit-label');
         const status = document.getElementById('form-status');
+        const getEmailHref = (formData) => {
+            const subject = `Portfolio inquiry from ${formData.get('name')}`;
+            const body = [
+                `Name: ${formData.get('name')}`,
+                `Email: ${formData.get('email')}`,
+                '',
+                formData.get('message')
+            ].join('\n');
+            return `mailto:${data.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        };
         const showStatus = (message, state, formData = null) => {
             status.dataset.state = state;
             status.replaceChildren(document.createTextNode(message));
 
             if (formData) {
-                const subject = `Portfolio inquiry from ${formData.get('name')}`;
-                const body = [
-                    `Name: ${formData.get('name')}`,
-                    `Email: ${formData.get('email')}`,
-                    '',
-                    formData.get('message')
-                ].join('\n');
                 const emailLink = document.createElement('a');
-                emailLink.href = `mailto:${data.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                emailLink.href = getEmailHref(formData);
                 emailLink.textContent = 'Email me directly';
                 status.append(document.createTextNode(' '), emailLink);
             }
@@ -252,6 +255,13 @@
             form.removeAttribute('aria-busy');
         };
         const formData = new FormData(form);
+        if (['localhost', '127.0.0.1', '::1'].includes(window.location.hostname)) {
+            showStatus('Your email app will open with the inquiry ready. Press Send in that app to deliver it.', 'pending', formData);
+            resetButton();
+            window.location.href = getEmailHref(formData);
+            return;
+        }
+
         const controller = new AbortController();
         let timedOut = false;
 
