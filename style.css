@@ -276,10 +276,12 @@ img { display: block; max-width: 100%; }
 .project-art-mark { position: absolute; top: 35px; left: 38px; color: currentColor; font-family: var(--font-display); font-size: clamp(76px, 10vw, 112px); line-height: 1; opacity: 0.62; }
 .project-art-index { color: currentColor; font-size: 11px; opacity: 0.66; }
 .project-art-integrity { background: #e3ebe1; color: #305446; }
+.project-art-lem { background: #4b2e1e; color: #faf3e7; }
 .project-art-metal { background: #e2e5e0; color: #33423b; }
 .project-art-coffee { background: #f0e2d6; color: #7e4c35; }
 .project-art-skills { background: #e4e9f0; color: #485e7a; }
 :root[data-theme="dark"] .project-art-integrity { background: #25372e; color: #a8c6ae; }
+:root[data-theme="dark"] .project-art-lem { background: #382419; color: #e0c09b; }
 :root[data-theme="dark"] .project-art-coffee { background: #3b2e29; color: #dfa17d; }
 :root[data-theme="dark"] .project-art-metal { background: #27322e; color: #bdc9c0; }
 :root[data-theme="dark"] .project-art-skills { background: #29333d; color: #afc1d8; }

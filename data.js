@@ -40,6 +40,23 @@ window.portfolioData = {
             mark: 'D'
         },
         {
+            id: 'lem-cafe',
+            number: '02',
+            name: 'Lem Cafe Digital Menu',
+            type: 'Digital menu',
+            category: 'web',
+            status: 'Live',
+            description: 'A mobile-friendly digital menu for Lem Cafe with search, filters, bilingual support, and quick ordering.',
+            detail: 'A responsive café menu experience for Dilla, featuring searchable and filterable menu categories, vegetarian and vegan filters, bilingual navigation, quick ordering through WhatsApp, contact details, opening hours, and a map.',
+            technologies: ['HTML', 'CSS', 'JavaScript'],
+            art: 'lem',
+            image: 'images/lem-cafe.jpg',
+            imageAlt: 'Lem Cafe digital menu preview',
+            artLabel: 'LEM · DIGITAL MENU',
+            mark: 'L',
+            demo: 'https://lemcafe.netlify.app/'
+        },
+        {
             id: 'muktar-metal',
             number: '03',
             name: 'Muktar Metal Work',
